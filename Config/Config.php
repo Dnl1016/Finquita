@@ -65,10 +65,10 @@
 	//Módulos
 	const MDASHBOARD = 1;
 	const MUSUARIOS = 2;
-	const MTRABAJADOR = 3;
-	const MCARGAS = 4;
+	const MWORKERS = 3;
+	const MCLOADS = 4;
 	const MCONFIGS = 5;
-	const MFINCAS = 6;
+	const MFARMS = 6;
 
 	//Páginas
 	const PINICIO = 1;

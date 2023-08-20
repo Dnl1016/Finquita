@@ -12,18 +12,18 @@
 			$total = $request['total']; 
 			return $total;
 		}
-		/*public function cantClientes(){
-			$sql = "SELECT COUNT(*) as total FROM persona WHERE status != 0 AND rolid = ".RCLIENTES;
+		public function cantTrabajadores(){
+			$sql = "SELECT COUNT(*) as total FROM workers WHERE status != 0";
 			$request = $this->select($sql);
 			$total = $request['total']; 
 			return $total;
 		}
-		public function cantProductos(){
-			$sql = "SELECT COUNT(*) as total FROM producto WHERE status != 0 ";
+		public function cantCargas(){
+			$sql = "SELECT COUNT(*) as total FROM loads ";
 			$request = $this->select($sql);
 			$total = $request['total']; 
 			return $total;
-		}
+		}/*
 		public function cantPedidos(){
 			$rolid = $_SESSION['userData']['idrol'];
 			$idUser = $_SESSION['userData']['idpersona'];

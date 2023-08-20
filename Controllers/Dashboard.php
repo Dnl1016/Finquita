@@ -22,9 +22,9 @@
 			$data['page_name'] = "dashboard";
 			$data['page_functions_js'] = "functions_dashboard.js";
 			$data['usuarios'] = $this->model->cantUsuarios();
-			/*$data['clientes'] = $this->model->cantClientes();
-			$data['productos'] = $this->model->cantProductos();
-			$data['pedidos'] = $this->model->cantPedidos();
+			$data['trabajadores'] = $this->model->cantTrabajadores();
+			$data['cargas'] = $this->model->cantCargas();
+			/*$data['pedidos'] = $this->model->cantPedidos();
 			$data['pedidos'] = $this->model->cantPedidos();
 			$data['lastOrders'] = $this->model->lastOrders();
 			$data['productosTen'] = $this->model->productosTen();
@@ -35,8 +35,8 @@
 			//dep($data['pagosMes']);exit;
 			$data['ventasMDia'] = $this->model->selectVentasMes($anio,$mes);
 			//dep($data['ventasMDia']);exit;
-			$data['ventasAnio'] = $this->model->selectVentasAnio($anio);*/
-			//dep($data['ventasAnio']);exit;
+			$data['ventasAnio'] = $this->model->selectVentasAnio($anio);
+			//dep($data['ventasAnio']);exit;*/
 			if( $_SESSION['userData']['idRol'] == RADMINISTRADOR ){
 				$this->views->getView($this,"dashboardCliente",$data);
 			}else{

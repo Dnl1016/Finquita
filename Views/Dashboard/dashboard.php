@@ -24,11 +24,11 @@
         <?php } ?>
         <?php if(!empty($_SESSION['permisos'][3]['r'])){ ?>
         <div class="col-md-6 col-lg-3">
-          <a href="<?= base_url() ?>/clientes" class="linkw">
+          <a href="<?= base_url() ?>/trabajadores" class="linkw">
             <div class="widget-small info coloured-icon"><i class="icon fa fa-user fa-3x"></i>
               <div class="info">
-                <h4>Clientes</h4>
-                <p><b><?= $data['clientes'] ?></b></p>
+                <h4>Trabajadores</h4>
+                <p><b><?= $data['trabajadores'] ?></b></p>
               </div>
             </div>
           </a>
@@ -39,8 +39,8 @@
           <a href="<?= base_url() ?>/productos" class="linkw">
             <div class="widget-small warning coloured-icon"><i class="icon fa fa fa-archive fa-3x"></i>
               <div class="info">
-                <h4>Productos</h4>
-                <p><b><?= $data['productos'] ?></b></p>
+                <h4>Cargas</h4>
+                <p><b><?= $data['cargas'] ?></b></p>
               </div>
             </div>
           </a>

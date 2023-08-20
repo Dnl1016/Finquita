@@ -14,7 +14,7 @@
 				$arrModulos = $this->model->selectModulos();
 				$arrPermisosRol = $this->model->selectPermisosRol($rolid);
 				$arrRol = $this->model->getRol($rolid);
-				$arrPermisos = array('r' => 0, 'w' => 0, 'u' => 0, 'd' => 0);
+				$arrPermisos = array('r' => 0, 'c' => 0, 'u' => 0, 'd' => 0);
 				$arrPermisoRol = array('idrol' => $rolid, 'rol' => $arrRol['nombrerol']);
 
 				if(empty($arrPermisosRol))
@@ -25,10 +25,10 @@
 					}
 				}else{
 					for ($i=0; $i < count($arrModulos); $i++) {
-						$arrPermisos = array('r' => 0, 'w' => 0, 'u' => 0, 'd' => 0);
+						$arrPermisos = array('r' => 0, 'c' => 0, 'u' => 0, 'd' => 0);
 						if(isset($arrPermisosRol[$i])){
 							$arrPermisos = array('r' => $arrPermisosRol[$i]['r'], 
-												 'w' => $arrPermisosRol[$i]['w'], 
+												 'c' => $arrPermisosRol[$i]['c'], 
 												 'u' => $arrPermisosRol[$i]['u'], 
 												 'd' => $arrPermisosRol[$i]['d'] 
 												);
@@ -53,10 +53,10 @@
 				foreach ($modulos as $modulo) {
 					$idModulo = $modulo['idmodulo'];
 					$r = empty($modulo['r']) ? 0 : 1;
-					$w = empty($modulo['w']) ? 0 : 1;
+					$c = empty($modulo['c']) ? 0 : 1;
 					$u = empty($modulo['u']) ? 0 : 1;
 					$d = empty($modulo['d']) ? 0 : 1;
-					$requestPermiso = $this->model->insertPermisos($intIdrol, $idModulo, $r, $w, $u, $d);
+					$requestPermiso = $this->model->insertPermisos($intIdrol, $idModulo, $r, $c, $u, $d);
 				}
 				if($requestPermiso > 0)
 				{

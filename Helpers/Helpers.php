@@ -153,6 +153,7 @@
         require_once ("Models/PermisosModel.php");
         $objPermisos = new PermisosModel();
         if(!empty($_SESSION['userData'])){
+            // session_destroy();
             $idrol = $_SESSION['userData']['idRol'];
             $arrPermisos = $objPermisos->permisosModulo($idrol);
             $permisos = '';
