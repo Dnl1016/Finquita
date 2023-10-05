@@ -12,32 +12,12 @@
 	const DB_PASSWORD = "";
 	const DB_CHARSET = "utf8";
 
-	//Para envío de correo
-	const ENVIRONMENT = 1; // Local: 0, Produccón: 1;
-
-	//Deliminadores decimal y millar Ej. 24,1989.00
-	const SPD = ".";
-	const SPM = ",";
-
-	//Simbolo de moneda
-	const SMONEY = "$";
-	const CURRENCY = "USD";
-
-	//Api PayPal
-	//SANDBOX PAYPAL
-	const URLPAYPAL = "https://api-m.sandbox.paypal.com";
-	const IDCLIENTE = "";
-	const SECRET = "";
-	//LIVE PAYPAL
-	//const URLPAYPAL = "https://api-m.paypal.com";
-	//const IDCLIENTE = "";
-	//const SECRET = "";
-
+	
 	//Datos envio de correo
 	const NOMBRE_REMITENTE = "La Finquita";
 	const EMAIL_REMITENTE = "no-reply@abelosh.com";
 	const NOMBRE_EMPESA = "Tienda Virtual";
-	const WEB_EMPRESA = "www.abelosh.com";
+
 
 	const DESCRIPCION = "La mejor tienda en línea con artículos de moda.";
 	const SHAREDHASH = "TiendaVirtual";
